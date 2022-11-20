@@ -9,6 +9,7 @@ hot💋💋.txt  --> hot(emoji).txt
 # How to use
 ```
 git clone https://github.com/tikendraw/fixname.git
+cd fixname
 
 usage: fixname.py [-h] [-d DIR] [-f FILE] [-r REPLACE]
 
