@@ -1,7 +1,7 @@
 # fixname
 Removes Emojies from filenames
 ```
-fire🔥🔥.png --> fire.png
+fire🔥🔥.png --> fire(emoji).png
 ```
 
 # How to use
