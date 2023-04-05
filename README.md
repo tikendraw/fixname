@@ -5,8 +5,13 @@ Removes Emojies from filenames
 fire🔥🔥.png --> fire(emoji).png
 hot💋💋.txt  --> hot(emoji).txt
 ```
+## Installation
+install colorama
+```
+pip install colorama
+```
 
-# How to use
+## How to use
 ```
 git clone https://github.com/tikendraw/fixname.git
 cd fixname
