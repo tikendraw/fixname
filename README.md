@@ -1,30 +1,33 @@
-# fixname
-Removes Emojies from filenames
+# fixname  : Remove Emoji from Filenames
+This Python script removes emojis from filenames.
+
+## Usage
+The script can be run from the command line using the following arguments:
 
 ```
-fire🔥🔥.png --> fire(emoji).png
-hot💋💋.txt  --> hot(emoji).txt
+python fixname.py -d /path/to/directory/with/files
+python fixname.py -f /path/to/single/file/with/emoji😀.png
 ```
-## Installation
-install colorama
-```
-pip install colorama
-```
+The -d option is used to specify the directory that contains files with emojis in their names. The -f option is used to specify a single file with an emoji in its name.
 
-## How to use
-```
-git clone https://github.com/tikendraw/fixname.git
-cd fixname
-
-usage: fixname.py [-h] [-d DIR] [-f FILE] [-r REPLACE]
-
-This scripts removes emojies form filenames recursively.(ABSOLUTE PATH MUST BE GIVEN)
-
-options:
-  -h, --help              show this help message and exit
-  -d DIR, --dir DIR       Directory containing files with emoji(s)
-  -f FILE, --file FILE    Filename which contains emoji
-  -r REPLACE, --replace   REPLACE
-                          Replace the emojis with given word
+By default, the script replaces the emojis with the string (emoji). However, you can use the -r option to specify a different string to replace the emojis with:
 
 ```
+python fixname.py -d /path/to/directory/with/files -r _emoji_
+```
+
+## Dependencies
+This script requires the tqdm and colorama libraries to be installed. You can install them using pip:
+
+```
+pip install tqdm colorama
+```
+
+## Emoji Removal Algorithm
+The algorithm used to remove the emojis from filenames is based on the regular expression pattern in the remove_emoji() function. The pattern matches a wide range of Unicode characters that represent emojis, symbols, and pictographs. When the pattern finds a match in the filename, it replaces the emoji with the string specified by the user.
+
+## Limitations
+The script only removes emojis from filenames, not from file contents. It also does not handle non-Unicode character encodings, such as ASCII or ISO-8859-1.
+
+## License
+This script is licensed under the MIT License.
